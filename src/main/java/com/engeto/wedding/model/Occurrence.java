@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class Occurrence {
 
+    int id;
+
     Date dateOfWedding;
     String title;
     Integer maximalPriceForGift;
@@ -14,6 +16,13 @@ public class Occurrence {
     public Occurrence(Date dateOfWedding, String title, Integer maximalPriceForGift) {
         dateOfWedding = dateOfWedding;
         title = title;
+        this.maximalPriceForGift = maximalPriceForGift;
+    }
+
+    public Occurrence(int id, Date dateOfWedding, String title, Integer maximalPriceForGift) {
+        this.id = id;
+        this.dateOfWedding = dateOfWedding;
+        this.title = title;
         this.maximalPriceForGift = maximalPriceForGift;
     }
 
@@ -39,6 +48,14 @@ public class Occurrence {
 
     public void setMaximalPriceForGift(Integer maximalPriceForGift) {
         this.maximalPriceForGift = maximalPriceForGift;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
